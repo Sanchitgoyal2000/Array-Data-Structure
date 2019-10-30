@@ -20,13 +20,14 @@ int main() {
 	    {
 	        a[a[i]%n]=a[a[i]%n]+n;   // important step must take modulus
 	    }
-	    int h=0,rep,mis;
+	    int h=0,rep,mis,p=0;
 	   //
 	    for(int i=0;i<n;i++)
 	    {
-	        if(a[i]<n)
+	        if(p==0&&a[i]<n)
 	        {
 	            mis=i+1;
+	            p=1;
 	        }
 	        else if(h==0&&(a[i]/n)>=2)
 	        {
